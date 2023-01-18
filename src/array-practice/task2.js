@@ -15,3 +15,22 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export default function arrayDiff(arr1, arr2) {
+  const map = new Map();
+
+  arr1.forEach((element) =>
+    map.has(element) ? map.set(element, map.get(element) + 1) : map.set(element, 1)
+  );
+  arr2.forEach((element) =>
+    map.has(element) ? map.set(element, map.get(element) + 1) : map.set(element, 1)
+  );
+
+  return Array.from(map.keys()).reduce((result, key) => {
+    if (map.get(key) === 1) {
+      result.push(key);
+      return result;
+    }
+    return result;
+  }, []);
+}
