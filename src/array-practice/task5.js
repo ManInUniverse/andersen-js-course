@@ -15,3 +15,14 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export default function createGenerator(arr) {
+  return {
+    arr,
+    step: 0,
+    next() {
+      this.step += 1;
+      return this.arr[this.step - 1] || 'Complete!';
+    },
+  };
+}
