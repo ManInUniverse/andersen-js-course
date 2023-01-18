@@ -24,6 +24,7 @@ import arrayDiff from './array-practice/task2';
 import forEachRight from './array-practice/task3';
 import union from './array-practice/task4';
 import createGenerator from './array-practice/task5';
+import transformArrayToNumber from './array-practice/task6';
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
@@ -52,6 +53,14 @@ console.log(generator.next()); // 3
 console.log(generator.next()); // 2
 console.log(generator.next()); // 'Complete!'
 console.log(generator.next()); // 'Complete!'
+
+console.log('=============');
+
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
 
 console.log('=============');
 
