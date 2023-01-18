@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import './styles/main.css';
 
 /**
@@ -17,6 +18,14 @@ import './styles/main.css';
  *
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
+
+import any from './array-practice/task1';
+
+console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
+console.log(any([0, 0, 1, 0])); // true
+console.log(any([0, 0, 0, 0])); // false
+
+console.log('=============');
 
 // import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
