@@ -21,6 +21,7 @@ import './styles/main.css';
 
 import any from './array-practice/task1';
 import arrayDiff from './array-practice/task2';
+import forEachRight from './array-practice/task3';
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
@@ -30,6 +31,10 @@ console.log('=============');
 
 console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
 console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+
+console.log('=============');
+
+forEachRight([1, 2, 3, 4], (val) => console.log(val)); // в консоль 4 3 2 1
 
 console.log('=============');
 
