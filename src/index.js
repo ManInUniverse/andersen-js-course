@@ -30,6 +30,8 @@ import without from './array-practice/task8';
 import indexOfAll from './array-practice/task9';
 import membersOnActiveMeetups from './array-practice/task10';
 
+import { task1Old, task1New } from './es-features/task1';
+
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
 console.log(any([0, 0, 0, 0])); // false
@@ -93,7 +95,6 @@ console.log(membersOnActiveMeetups(meetups)); // 1500
 
 console.log('=============');
 
-// import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
 // import { task3Old, task3New } from './es-features/task3';
 // import { task4Old, task4New } from './es-features/task4';
@@ -109,10 +110,10 @@ console.log('=============');
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
 
-// console.log('task1 old', task1Old(10) === 500); // true
-// console.log('task1 new', task1New(10) === 500); // true
+console.log('task1 old', task1Old(10) === 500); // true
+console.log('task1 new', task1New(10) === 500); // true
 
-// console.log('=============');
+console.log('=============');
 
 // console.log('task2 old', task2Old(1, 2, 'test', false, 'new', 'best') === 12); // true
 // console.log('task2 new', task2New(1, 2, 'test', false, 'new', 'best') === 12); // true
