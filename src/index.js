@@ -28,6 +28,7 @@ import transformArrayToNumber from './array-practice/task6';
 import take from './array-practice/task7';
 import without from './array-practice/task8';
 import indexOfAll from './array-practice/task9';
+import membersOnActiveMeetups from './array-practice/task10';
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
@@ -79,6 +80,16 @@ console.log('=============');
 
 console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
 console.log(indexOfAll([1, 2, 3], 4)); // []
+
+console.log('=============');
+
+const meetups = [
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
+];
+console.log(membersOnActiveMeetups(meetups)); // 1500
 
 console.log('=============');
 
