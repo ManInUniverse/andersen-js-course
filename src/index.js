@@ -38,6 +38,7 @@ import { task5Old, task5New } from './es-features/task5';
 import { task6Old, task6New } from './es-features/task6';
 import { task7Old, task7New } from './es-features/task7';
 import { task8Old, task8New } from './es-features/task8';
+import { task9Old, task9New } from './es-features/task9';
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
@@ -102,7 +103,6 @@ console.log(membersOnActiveMeetups(meetups)); // 1500
 
 console.log('=============');
 
-// import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
 // import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
@@ -150,10 +150,10 @@ console.log('task8 new', task8New()); // [0, 5, 10, 15]
 
 console.log('=============');
 
-// console.log('task9 old', task9Old()); // [true, 1]
-// console.log('task9 new', task9New()); // [true, 1]
+console.log('task9 old', task9Old()); // [true, 1]
+console.log('task9 new', task9New()); // [true, 1]
 
-// console.log('=============');
+console.log('=============');
 
 // console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
