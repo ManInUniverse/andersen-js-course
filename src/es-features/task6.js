@@ -28,4 +28,20 @@ export function task6Old() {
 // Напишите реализацию функции task6Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task6New() {}
+export const task6New = () => {
+  class UserModule {
+    constructor(name, value, role, cases, isActive) {
+      this.name = name;
+      this.value = value;
+      this.role = role;
+      this.isActive = isActive || false;
+      this.cases = cases;
+    }
+  }
+
+  const { name, value, role, cases, isActive } = new UserModule('Max', 100, { name: 'Admin' }, [
+    { id: '1' },
+  ]);
+
+  return [name, value, role.name, isActive, cases[0].id];
+};
