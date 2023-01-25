@@ -44,6 +44,7 @@ import { task11Old, task11New } from './es-features/task11';
 import { task12Old, task12New } from './es-features/task12';
 import { task13Old, task13New } from './es-features/task13';
 import { task14Old, task14New } from './es-features/task14';
+import { task15Old, task15New } from './es-features/task15';
 
 console.log(any([0, 1, 2, 0], (x) => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
@@ -107,8 +108,6 @@ const meetups = [
 console.log(membersOnActiveMeetups(meetups)); // 1500
 
 console.log('=============');
-
-// import { task15Old, task15New } from './es-features/task15';
 
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
@@ -180,7 +179,19 @@ console.log('task14 new', task14New({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b
 
 console.log('=============');
 
-// console.log('task15 old', task15Old([['a', 1], ['b', 2]])); // {a: 1, b: 2}
-// console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
+console.log(
+  'task15 old',
+  task15Old([
+    ['a', 1],
+    ['b', 2],
+  ])
+); // {a: 1, b: 2}
+console.log(
+  'task15 new',
+  task15New([
+    ['a', 1],
+    ['b', 2],
+  ])
+); // {a: 1, b: 2}
 
-// console.log('=============');
+console.log('=============');
