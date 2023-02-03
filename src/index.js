@@ -8,6 +8,7 @@ import { delay } from './asynchronous-programming/task-3';
 // task-5
 import { getResolvedPromise } from './asynchronous-programming/task-6';
 import fooFromTask7 from './asynchronous-programming/task-7';
+import fooFromTask8 from './asynchronous-programming/task-8';
 
 console.log('Hi');
 
@@ -45,5 +46,10 @@ getResolvedPromise(500)
 console.log('==========');
 
 fooFromTask7(); // 20
+
+console.log('==========');
+
+fooFromTask8('https://jsonplaceholder.typicode.com/users'); // В консоль распечатается Объект пользователя
+fooFromTask8('ht://jsonplaceholder.typicode.com/users'); // В консоль распечатается Error! текст ошибки
 
 console.log('==========');
