@@ -4,7 +4,7 @@ import './styles/main.css';
 import { foo, createCb } from './asynchronous-programming/task-1';
 import { parseJSON, successCb, failureCb } from './asynchronous-programming/task-2';
 import { delay } from './asynchronous-programming/task-3';
-// task-4
+import { getData } from './asynchronous-programming/task-4';
 // task-5
 import { getResolvedPromise } from './asynchronous-programming/task-6';
 import fooFromTask7 from './asynchronous-programming/task-7';
@@ -30,7 +30,9 @@ delay(1000).then((value) => console.log(`Done with ${value}`)); // Done with 100
 
 console.log('==========');
 
-// task-4
+getData();
+
+console.log('==========');
 
 // task-5
 
