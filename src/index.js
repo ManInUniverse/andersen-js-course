@@ -7,6 +7,7 @@ import { delay } from './asynchronous-programming/task-3';
 // task-4
 // task-5
 import { getResolvedPromise } from './asynchronous-programming/task-6';
+import fooFromTask7 from './asynchronous-programming/task-7';
 
 console.log('Hi');
 
@@ -40,5 +41,9 @@ getResolvedPromise(500)
   })
   .catch((err) => console.log(err.message))
   .finally(() => console.log('This is Finally!'));
+
+console.log('==========');
+
+fooFromTask7(); // 20
 
 console.log('==========');
