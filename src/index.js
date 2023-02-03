@@ -10,6 +10,7 @@ import { getResolvedPromise } from './asynchronous-programming/task-6';
 import fooFromTask7 from './asynchronous-programming/task-7';
 import fooFromTask8 from './asynchronous-programming/task-8';
 import fooFromTask9 from './asynchronous-programming/task-9';
+import Musician from './asynchronous-programming/task-10';
 
 console.log('Hi');
 
@@ -56,5 +57,10 @@ fooFromTask8('ht://jsonplaceholder.typicode.com/users'); // В консоль р
 console.log('==========');
 
 fooFromTask9(); // В консоль распечатается 'Some string!'
+
+console.log('==========');
+
+const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
+musician.getAlbums().then((albums) => console.log(albums)); // В консоль распечатается массив объектов альбомов
 
 console.log('==========');
