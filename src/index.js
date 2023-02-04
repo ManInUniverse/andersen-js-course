@@ -5,7 +5,7 @@ import { foo, createCb } from './asynchronous-programming/task-1';
 import { parseJSON, successCb, failureCb } from './asynchronous-programming/task-2';
 import { delay } from './asynchronous-programming/task-3';
 import { getData } from './asynchronous-programming/task-4';
-// task-5
+import { getDataInSeries, getDataParallel } from './asynchronous-programming/task-5';
 import { getResolvedPromise } from './asynchronous-programming/task-6';
 import fooFromTask7 from './asynchronous-programming/task-7';
 import fooFromTask8 from './asynchronous-programming/task-8';
@@ -34,7 +34,18 @@ getData();
 
 console.log('==========');
 
-// task-5
+const urls = [
+  'https://jsonplaceholder.typicode.com/albums/1',
+  'https://jsonplaceholder.typicode.com/albums/2',
+  'https://jsonplaceholder.typicode.com/albums/3',
+  'https://jsonplaceholder.typicode.com/albums/4',
+  'https://jsonplaceholder.typicode.com/albums/5',
+];
+
+getDataInSeries(urls);
+getDataParallel(urls);
+
+console.log('==========');
 
 getResolvedPromise(500)
   .then((result) => {
