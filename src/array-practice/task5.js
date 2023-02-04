@@ -15,3 +15,24 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export default function createGenerator(arr) {
+  return {
+    _step: 0,
+    next() {
+      this._step += 1;
+      return arr[this._step - 1] ?? 'Complete!';
+    },
+  };
+}
+
+// Альтернативное решение
+
+// export const createGenerator = array => {
+//   const copyArray = array.slice();
+//   return {
+//     next() {
+//       return copyArray.length === 0 ? 'Complete!' : copyArray.shift();
+//     },
+//   };
+// };
