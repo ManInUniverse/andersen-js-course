@@ -18,11 +18,21 @@
 
 export default function createGenerator(arr) {
   return {
-    arr,
-    step: 0,
+    _step: 0,
     next() {
-      this.step += 1;
-      return this.arr[this.step - 1] || 'Complete!';
+      this._step += 1;
+      return arr[this._step - 1] ?? 'Complete!';
     },
   };
 }
+
+// Альтернативное решение
+
+// export const createGenerator = array => {
+//   const copyArray = array.slice();
+//   return {
+//     next() {
+//       return copyArray.length === 0 ? 'Complete!' : copyArray.shift();
+//     },
+//   };
+// };

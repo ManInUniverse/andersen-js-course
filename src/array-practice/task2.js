@@ -34,3 +34,8 @@ export default function arrayDiff(arr1, arr2) {
     return result;
   }, []);
 }
+
+// Альтернативное решение
+
+// export const arrayDiff = (arr, arrTwo) =>
+//   [...arr, ...arrTwo].filter((value) => !arrTwo.includes(value) || !arr.includes(value));

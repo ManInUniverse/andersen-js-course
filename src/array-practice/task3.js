@@ -13,5 +13,5 @@
  */
 
 export default function forEachRight(arr, cb) {
-  arr.reverse().forEach((value) => cb(value));
+  [...arr].reverse().forEach((value) => cb(value));
 }
